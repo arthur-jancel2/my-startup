@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediRecycle - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="banner-container">
+        <!-- Image de la bannière -->
+        <img src="images/banière.jpg" alt="Bannière MediRecycle" class="banner-image">
+    </div>
+    <h1>MediRecycle</h1>
+    <h2>Extend the life of medicines and combat shortages</h2>
+</header>
+
+<!-- Section About Us -->
+<section class="about-us">
+    <h3>About Us</h3>
+    <p>MediRecycle is a pre-seed startup, founded by Arthur Jancel, a student at HEC Paris. It focuses on improving medicines' accessibility and creating solutions that ensure the reuse of medicines while reducing waste.</p>
+</section>
+
+<!-- Section Our Concept -->
+<section class="concept">
+    <h3>Our Concept</h3>
+    <p>MediRecycle is a system between private individuals and pharmacies designed to extend the life of medicines and combat shortages. Individuals can exchange medicines they don't need in pharmacies. Thanks to a home delivery system, MediRecycle guarantees access to low-cost care for the elderly and disabled, while respecting health standards.</p>
+</section>
+
+<!-- Section Contact -->
+<section class="contact-section">
+    <h3>Contact Us</h3>
+    <button id="contactBtn">Open the contact form</button>
+    <div id="contactForm" class="contact-form" style="display: none;">
+        <form action="/submit" method="POST">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+<!-- Script to toggle the contact form visibility -->
+<script>
+    document.getElementById('contactBtn').addEventListener('click', function() {
+        var contactForm = document.getElementById('contactForm');
+        if (contactForm.style.display === "none") {
+            contactForm.style.display = "block";
+            this.textContent = "Close the form";
+        } else {
+            contactForm.style.display = "none";
+            this.textContent = "Open the contact form";
+        }
+    });
+</script>
+
+</body>
+</html>
